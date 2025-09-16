@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple HTML Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome SaviAssist</h1>
+  </header>
+
+  <main>
+  <script>
+  window.wxOConfiguration = {
+    orchestrationID: "20250913-0510-0825-2033-12321e07cc84_20250913-0510-4614-40d3-33f51b5faab0",
+    hostURL: "https://ap-south-1.dl.watson-orchestrate.ibm.com",
+    rootElementID: "root",
+    chatOptions: {
+        agentId: "4076857d-334e-4b95-9cd1-5ce3df0ff5a5", 
+        agentEnvironmentId: "82c76dda-b31f-43fc-a2b9-56cbccdd4674",
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);                     
+</script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ravi Kumar</p>
+  </footer>
+
+</body>
+</html>
